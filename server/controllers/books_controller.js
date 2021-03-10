@@ -25,7 +25,7 @@ module.exports = {
             }
         })
         const updatedBook = {
-            id,
+            id: +id,
             title,
             author
         }
@@ -42,7 +42,7 @@ module.exports = {
         let bookIndex2 = null
         books.forEach((elem, i) => {
             if(elem.id === +req.params.id){
-                bookIndex = i
+                bookIndex2 = i
             }
         })
         books.splice(bookIndex2, 1)
